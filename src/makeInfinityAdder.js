@@ -6,7 +6,7 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  const adder = (number) => {
+  const makeAdder = (number) => {
     if (typeof number !== 'number') {
       const result = sum;
 
@@ -16,10 +16,10 @@ function makeInfinityAdder() {
     }
     sum += number;
 
-    return adder;
+    return makeAdder;
   };
 
-  return adder;
+  return makeAdder;
 }
 
 module.exports = makeInfinityAdder;
